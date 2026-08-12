@@ -1198,11 +1198,266 @@ const initTechStack = () => {
   }, section);
   return ctx;
 };
-initTechStack();
-//
 
+
+initTechStack();
 initAboutSection();
 heroTimeline.eventCallback("onComplete", () => {
   initSelectedWork();
   ScrollTrigger.refresh();
 });
+/* =====================================================
+   SECTION 05 — CONTACT ENTRANCE
+===================================================== */
+const initContactSection = () => {
+  const section = document.querySelector("#contact");
+  if (!section) return;
+  const availability = section.querySelector(".contact-availability");
+  const dot = section.querySelector(".contact-status-dot");
+  const title = section.querySelector(".contact-title");
+  const actions = section.querySelector(".contact-actions");
+  const visual = section.querySelector(".contact-visual");
+  const quote = section.querySelector(".contact-quote");
+  const signature = section.querySelector(".contact-signature");
+  const background = section.querySelector(".contact-bg");
+  const footer = document.querySelector(".site-footer");
+  if (!availability || !title || !actions || !visual) return;
+  /* ---------------------------------------------
+     INITIAL STATES
+  --------------------------------------------- */
+  gsap.set(availability, {
+    autoAlpha: 0,
+    x: -180,
+  });
+  gsap.set(title, {
+    autoAlpha: 0,
+    x: -280,
+  });
+  gsap.set(actions, {
+    autoAlpha: 0,
+    x: -160,
+  });
+  gsap.set(visual, {
+    autoAlpha: 0,
+    x: 280,
+    scale: 0.85,
+  });
+  if (quote) {
+    gsap.set(quote, {
+      autoAlpha: 0,
+      x: 140,
+    });
+  }
+  if (signature) {
+    gsap.set(signature, {
+      autoAlpha: 0,
+      x: 120,
+      y: 40,
+      rotation: -12,
+    });
+  }
+  if (background) {
+    gsap.set(background, {
+      scale: 1.12,
+      x: 80,
+    });
+  }
+  if (footer) {
+    gsap.set(footer, {
+      autoAlpha: 0,
+      y: 30,
+    });
+  }
+  if (dot) {
+    gsap.set(dot, {
+      autoAlpha: 0,
+      scale: 0,
+    });
+  }
+  /* ---------------------------------------------
+     ENTRANCE TIMELINE
+  --------------------------------------------- */
+  const entrance = gsap.timeline({
+    paused: true,
+  });
+  entrance
+    .to(
+      background,
+      {
+        scale: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power4.out",
+      },
+      0,
+    )
+    .to(
+      availability,
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.7,
+        ease: "power4.out",
+      },
+      0,
+    )
+    .to(
+      dot,
+      {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.45,
+        ease: "back.out(2)",
+      },
+      0.15,
+    )
+    .to(
+      title,
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+      },
+      0.1,
+    )
+    .to(
+      actions,
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.75,
+        ease: "power4.out",
+      },
+      0.35,
+    )
+    .to(
+      visual,
+      {
+        autoAlpha: 1,
+        x: 0,
+        scale: 1,
+        duration: 1,
+        ease: "power4.out",
+      },
+      0.05,
+    )
+    .to(
+      quote,
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.7,
+        ease: "power3.out",
+      },
+      0.4,
+    )
+    .to(
+      signature,
+      {
+        autoAlpha: 1,
+        x: 0,
+        y: 0,
+        rotation: -7,
+        duration: 0.75,
+        ease: "back.out(1.4)",
+      },
+      0.5,
+    )
+    .to(
+      footer,
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      0.6,
+    );
+  /* ---------------------------------------------
+     NATIVE SCROLL DETECTION
+  --------------------------------------------- */
+  let hasEntered = false;
+  let lastScrollY = window.scrollY;
+  const checkContactPosition = () => {
+    const rect = section.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const enterPoint = viewportHeight * 0.82;
+    const leavePoint = viewportHeight * 0.98;
+    if (!hasEntered && rect.top <= enterPoint && rect.bottom > leavePoint) {
+      hasEntered = true;
+      entrance.play();
+    }
+    if (hasEntered && rect.top > viewportHeight * 0.95) {
+      hasEntered = false;
+      entrance.reverse();
+    }
+    lastScrollY = window.scrollY;
+  };
+  window.addEventListener("scroll", checkContactPosition, {
+    passive: true,
+  });
+  window.addEventListener("resize", checkContactPosition);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(checkContactPosition);
+  });
+  /* ---------------------------------------------
+     AVAILABILITY DOT
+  --------------------------------------------- */
+  if (dot) {
+    gsap.to(dot, {
+      boxShadow: "0 0 20px rgba(53,199,89,0.9)",
+      duration: 1.6,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+  }
+  /* ---------------------------------------------
+     CONNECT BUTTON HOVER
+  --------------------------------------------- */
+  const connectButton = section.querySelector(".contact-linkedin");
+  if (connectButton) {
+    connectButton.addEventListener("mouseenter", () => {
+      gsap.to(connectButton, {
+        y: -4,
+        scale: 1.03,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+    connectButton.addEventListener("mouseleave", () => {
+      gsap.to(connectButton, {
+        y: 0,
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+  }
+  /* ---------------------------------------------
+     RESUME HOVER
+  --------------------------------------------- */
+  const resumeButton = section.querySelector(".contact-resume");
+  const downloadIcon = section.querySelector(".contact-download-icon");
+  if (resumeButton && downloadIcon) {
+    resumeButton.addEventListener("mouseenter", () => {
+      gsap.to(downloadIcon, {
+        y: 5,
+        duration: 0.25,
+        ease: "power2.out",
+      });
+    });
+    resumeButton.addEventListener("mouseleave", () => {
+      gsap.to(downloadIcon, {
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+      });
+    });
+  }
+};
+/* =====================================================
+   INITIALIZE SECTION 05
+===================================================== */
+initContactSection();
