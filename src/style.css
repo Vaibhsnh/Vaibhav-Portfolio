@@ -710,9 +710,7 @@ button {
   color: rgba(255, 255, 255, 0.05);
 }
 
-/* =========================================
-   SECTION 02 — SELECTED WORK
-========================================= */
+/* --------------------------SECTION 02 — SELECTED WORK-------------------------- */
 
 .work-section {
   position: relative;
@@ -726,9 +724,7 @@ button {
   color: #fff;
 }
 
-/* =========================================
-   MAIN CONTAINER
-========================================= */
+/* --------------------------MAIN CONTAINER-------------------------- */
 
 .work-container {
   position: relative;
@@ -740,9 +736,7 @@ button {
   justify-content: center;
 }
 
-/* =========================================
-   SECTION NUMBER
-========================================= */
+/* --------------------------SECTION NUMBER-------------------------- */
 
 .work-section-number {
   position: absolute;
@@ -754,9 +748,7 @@ button {
   z-index: 20;
 }
 
-/* =========================================
-   SECTION LABEL
-========================================= */
+/* --------------------------SECTION LABEL-------------------------- */
 
 .work-section-label {
   position: absolute;
@@ -769,9 +761,7 @@ button {
   z-index: 20;
 }
 
-/* =========================================
-   WORK STAGE
-========================================= */
+/* --------------------------WORK STAGE-------------------------- */
 
 .work-stage {
   position: relative;
@@ -787,9 +777,7 @@ button {
   z-index: 10;
 }
 
-/* =========================================
-   LEFT INFORMATION
-========================================= */
+/* --------------------------LEFT INFORMATION-------------------------- */
 
 .work-info {
   position: relative;
@@ -799,9 +787,7 @@ button {
   align-items: center;
 }
 
-/* =========================================
-   COUNTER
-========================================= */
+/* --------------------------COUNTER-------------------------- */
 
 .work-counter {
   position: absolute;
@@ -827,9 +813,7 @@ button {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* =========================================
-   PROJECT CONTENT
-========================================= */
+/* --------------------------PROJECT CONTENT-------------------------- */
 
 .work-content {
   position: absolute;
@@ -882,9 +866,7 @@ button {
   margin-bottom: 25px;
 }
 
-/* =========================================
-   PROJECT TECHNOLOGIES
-========================================= */
+/* --------------------------PROJECT TECHNOLOGIES-------------------------- */
 
 .work-tech {
   display: flex;
@@ -902,9 +884,7 @@ button {
   font-size: 10px;
 }
 
-/* =========================================
-   GLASS BUTTONS
-========================================= */
+/* --------------------------GLASS BUTTONS-------------------------- */
 
 .work-actions {
   display: flex;
@@ -950,9 +930,7 @@ button {
   background: rgba(255, 95, 0, 0.12);
 }
 
-/* =========================================
-   RIGHT VISUAL
-========================================= */
+/* --------------------------RIGHT VISUAL-------------------------- */
 
 .work-visual {
   position: relative;
@@ -963,9 +941,7 @@ button {
   justify-content: center;
 }
 
-/* =========================================
-   PROJECT IMAGE
-========================================= */
+/* --------------------------PROJECT IMAGE-------------------------- */
 
 .work-image {
   position: absolute;
@@ -974,7 +950,7 @@ button {
   max-height: 500px;
   overflow: hidden;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: none;
   background: #111;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
   opacity: 0;
@@ -1018,9 +994,7 @@ button {
   color: #fff;
 }
 
-/* =========================================
-   FLOATING GLASS ORBS
-========================================= */
+/* --------------------------FLOATING GLASS ORBS-------------------------- */
 
 .work-orb {
   position: absolute;
@@ -1055,9 +1029,7 @@ button {
   top: 22%;
 }
 
-/* =========================================
-   SCROLL PROGRESS
-========================================= */
+/* --------------------------SCROLL PROGRESS-------------------------- */
 
 .work-progress {
   position: absolute;
@@ -1082,79 +1054,56 @@ button {
   transform-origin: left;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* --------------------------RESPONSIVE-------------------------- */
 
 @media (max-width: 1000px) {
   .work-section {
     height: auto;
-
     min-height: 100vh;
-
     overflow: visible;
   }
 
   .work-container {
     height: auto;
-
     padding: 120px 0 80px;
   }
-
   .work-stage {
     height: auto;
-
     min-height: auto;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 50px;
   }
-
   .work-info {
     height: 500px;
   }
 
   .work-content {
     position: relative;
-
     margin-bottom: 50px;
   }
-
   .work-visual {
     height: 400px;
   }
-
   .work-image {
     position: relative;
-
     opacity: 1;
-
     visibility: visible;
-
     transform: none;
-
     margin-bottom: 30px;
   }
-
   .work-image:not(:first-child) {
     display: none;
   }
-
   .work-orb {
     display: none;
   }
-
   .work-progress {
     display: none;
   }
 }
 
-/* =========================================
-   SECTION 03 — ABOUT ME
-========================================= */
+/* --------------------------SECTION 03 — ABOUT ME-------------------------- */
 .about-section {
   position: relative;
   width: 100%;
@@ -1163,6 +1112,7 @@ button {
   background: #090909;
   color: #fff;
 }
+
 .about-container {
   position: relative;
   width: min(1400px, 90%);
@@ -1170,6 +1120,7 @@ button {
   margin: 0 auto;
   padding: 10px 0;
 }
+
 .about-section-number {
   position: absolute;
   top: 50px;
@@ -1178,6 +1129,7 @@ button {
   font-size: 14px;
   font-weight: 600;
 }
+
 .about-section-label {
   position: absolute;
   top: 55px;
@@ -1187,6 +1139,7 @@ button {
   font-weight: 600;
   letter-spacing: 1.5px;
 }
+
 .about-grid {
   position: relative;
   min-height: 75vh;
@@ -1196,10 +1149,12 @@ button {
   gap: 6%;
   align-items: center;
 }
+
 .about-copy {
   position: relative;
   z-index: 5;
 }
+
 .about-kicker {
   display: block;
   margin-bottom: 18px;
@@ -1208,6 +1163,7 @@ button {
   letter-spacing: 2px;
   font-weight: 600;
 }
+
 .about-title {
   margin: 0 0 28px;
   font-size: clamp(48px, 5vw, 78px);
@@ -1215,10 +1171,12 @@ button {
   letter-spacing: -4px;
   font-weight: 700;
 }
+
 .about-title span {
   color: #ff5f00;
   font-style: italic;
 }
+
 .about-description {
   max-width: 430px;
   margin: 0 0 30px;
@@ -1226,6 +1184,7 @@ button {
   font-size: 14px;
   line-height: 1.8;
 }
+
 .about-button {
   display: inline-flex;
   align-items: center;
@@ -1246,6 +1205,7 @@ button {
     background 0.3s ease,
     transform 0.3s ease;
 }
+
 .about-button span {
   width: 32px;
   height: 32px;
@@ -1256,37 +1216,44 @@ button {
   background: #ff5f00;
   color: #fff;
 }
+
 .about-button:hover {
   transform: translateY(-3px);
   border-color: rgba(255, 95, 0, 0.8);
   background: rgba(255, 95, 0, 0.08);
 }
+
 .about-stats {
   display: flex;
   align-items: center;
   gap: 25px;
   margin-top: 45px;
 }
+
 .about-stat {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .about-stat strong {
   color: #ff5f00;
   font-size: 28px;
   line-height: 1;
 }
+
 .about-stat span {
   color: rgba(255, 255, 255, 0.42);
   font-size: 9px;
   letter-spacing: 0.5px;
 }
+
 .about-stat-divider {
   width: 1px;
   height: 38px;
   background: rgba(255, 255, 255, 0.12);
 }
+
 .about-visual {
   position: relative;
   min-height: 560px;
@@ -1294,6 +1261,7 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 .about-glow {
   position: absolute;
   width: 390px;
@@ -1307,7 +1275,8 @@ button {
   );
   filter: blur(8px);
 }
- .about-image-frame {
+
+.about-image-frame {
   background-image: url(./assets/images/Vaibhav-about-image.png);
   background-size: cover;
   background-position: center;
@@ -1317,6 +1286,7 @@ button {
   border-radius: 28px;
   z-index: 4;
 }
+
 .about-image-placeholder span {
   width: 72px;
   height: 72px;
@@ -1330,17 +1300,20 @@ button {
   font-size: 25px;
   background: rgba(255, 95, 0, 0.06);
 }
+
 .about-image-placeholder strong {
   font-size: clamp(32px, 3vw, 50px);
   line-height: 0.92;
   letter-spacing: -2px;
 }
+
 .about-image-placeholder small {
   margin-top: 28px;
   color: rgba(255, 255, 255, 0.3);
   font-size: 9px;
   letter-spacing: 3px;
 }
+
 .about-ring {
   position: absolute;
   border: 1px solid rgba(255, 95, 0, 0.25);
@@ -1348,15 +1321,18 @@ button {
   pointer-events: none;
   z-index: 1;
 }
+
 .about-ring-one {
   width: 520px;
   height: 520px;
 }
+
 .about-ring-two {
   width: 600px;
   height: 300px;
   transform: rotate(-28deg);
 }
+
 .about-floating-card {
   position: absolute;
   display: flex;
@@ -1371,32 +1347,39 @@ button {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
   z-index: 8;
 }
+
 .about-floating-card span {
   color: #ff5f00;
   font-size: 14px;
 }
+
 .about-floating-card strong {
   font-size: 9px;
   letter-spacing: 0.5px;
 }
+
 .about-card-code {
   top: 17%;
   left: -3%;
 }
+
 .about-card-gsap {
   top: 45%;
   right: -5%;
 }
+
 .about-card-focus {
   bottom: 15%;
   left: 0;
 }
+
 .about-features {
   position: relative;
   z-index: 5;
   display: flex;
   flex-direction: column;
 }
+
 .about-feature {
   display: flex;
   align-items: flex-start;
@@ -1404,9 +1387,11 @@ button {
   padding: 25px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .about-feature:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .about-feature-icon {
   flex: 0 0 auto;
   width: 44px;
@@ -1420,17 +1405,20 @@ button {
   background: rgba(255, 95, 0, 0.05);
   font-size: 13px;
 }
+
 .about-feature-content h3 {
   margin: 2px 0 8px;
   font-size: 15px;
   font-weight: 600;
 }
+
 .about-feature-content p {
   margin: 0;
   color: rgba(255, 255, 255, 0.45);
   font-size: 11px;
   line-height: 1.65;
 }
+
 .about-orb {
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1440,12 +1428,14 @@ button {
   -webkit-backdrop-filter: blur(8px);
   pointer-events: none;
 }
+
 .about-orb-one {
   width: 170px;
   height: 170px;
   top: 8%;
   right: 7%;
 }
+
 .about-orb-two {
   width: 70px;
   height: 70px;
@@ -1453,9 +1443,7 @@ button {
   left: 42%;
 }
 
-/* =====================================================
-   SECTION 04 — TECH STACK
-===================================================== */
+/* --------------------------SECTION 04 — TECH STACK-------------------------- */
 .stack-section {
   position: relative;
   width: 100%;
@@ -1464,6 +1452,7 @@ button {
   background: #0a0a0a;
   color: #fff;
 }
+
 .stack-container {
   position: relative;
   width: min(1500px, 92%);
@@ -1474,12 +1463,14 @@ button {
   flex-direction: column;
   justify-content: center;
 }
+
 .stack-heading {
   position: relative;
   z-index: 5;
   max-width: 700px;
   margin-bottom: 75px;
 }
+
 .stack-section-number {
   position: absolute;
   top: 4px;
@@ -1488,6 +1479,7 @@ button {
   font-size: 13px;
   font-weight: 600;
 }
+
 .stack-section-label {
   margin-left: 48px;
   margin-bottom: 22px;
@@ -1496,6 +1488,7 @@ button {
   letter-spacing: 2px;
   font-weight: 600;
 }
+
 .stack-title {
   margin: 0;
   font-size: clamp(54px, 7vw, 105px);
@@ -1503,9 +1496,11 @@ button {
   letter-spacing: -5px;
   font-weight: 700;
 }
+
 .stack-title span {
   color: #ff5f00;
 }
+
 .stack-description {
   max-width: 480px;
   margin: 30px 0 0;
@@ -1513,6 +1508,7 @@ button {
   font-size: 13px;
   line-height: 1.8;
 }
+
 .stack-marquee-wrapper {
   position: relative;
   width: calc(100% + 8vw);
@@ -1520,6 +1516,7 @@ button {
   z-index: 4;
   overflow: hidden;
 }
+
 .stack-marquee {
   position: relative;
   width: 100%;
@@ -1528,10 +1525,12 @@ button {
   border-bottom: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.02);
 }
+
 .stack-marquee-two {
   border-top: 0;
   background: #ff5f00;
 }
+
 .stack-track {
   width: max-content;
   display: flex;
@@ -1540,6 +1539,7 @@ button {
   padding: 34px 0;
   will-change: transform;
 }
+
 .stack-item {
   display: flex;
   align-items: center;
@@ -1548,6 +1548,7 @@ button {
   white-space: nowrap;
   transition: opacity 0.3s ease;
 }
+
 .stack-item img {
   width: 48px;
   height: 48px;
@@ -1555,6 +1556,7 @@ button {
   filter: brightness(0) invert(1);
   opacity: 0.9;
 }
+
 .stack-item span {
   color: rgba(255,255,255,0.88);
   font-size: clamp(25px, 3vw, 42px);
@@ -1562,9 +1564,11 @@ button {
   font-weight: 600;
   letter-spacing: -1.5px;
 }
+
 .stack-item:hover img {
   filter: none;
 }
+
 .stack-bottom {
   position: relative;
   z-index: 5;
@@ -1576,32 +1580,35 @@ button {
   font-size: 9px;
   letter-spacing: 2px;
 }
+
 .stack-bottom-line {
   width: 60px;
   height: 1px;
   background: rgba(255,255,255,0.12);
 }
+
 .stack-orb {
   position: absolute;
   border: 1px solid rgba(255,95,0,0.15);
   border-radius: 50%;
   pointer-events: none;
 }
+
 .stack-orb-one {
   width: 420px;
   height: 420px;
   top: -180px;
   right: -150px;
 }
+
 .stack-orb-two {
   width: 180px;
   height: 180px;
   bottom: -80px;
   left: 8%;
 }
-/* =====================================================
-   SECTION 05 — CONTACT
-===================================================== */
+/* --------------------------SECTION 05 — CONTACT-------------------------- */
+
 .contact-section {
   position: relative;
   width: 100%;
@@ -1610,16 +1617,18 @@ button {
   background: #08090a;
   color: #fff;
 }
+
 .contact-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/images/contact-background.jpg");
+  background-image: url("https://i.pinimg.com/736x/2d/94/5e/2d945e18b2a57545736e57086326845b.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.06);
   opacity: 0.82;
 }
+
 .contact-overlay {
   position: absolute;
   inset: 0;
@@ -1631,6 +1640,7 @@ button {
     rgba(8,9,10,0.72) 100%
   );
 }
+
 .contact-container {
   position: relative;
   z-index: 3;
@@ -1641,6 +1651,7 @@ button {
   display: flex;
   flex-direction: column;
 }
+
 .contact-availability {
   display: flex;
   align-items: center;
@@ -1650,6 +1661,7 @@ button {
   letter-spacing: 1.5px;
   font-weight: 500;
 }
+
 .contact-status-dot {
   width: 7px;
   height: 7px;
@@ -1658,6 +1670,7 @@ button {
   background: #35c759;
   box-shadow: 0 0 14px rgba(53,199,89,0.65);
 }
+
 .contact-main {
   display: flex;
   align-items: flex-end;
@@ -1666,9 +1679,11 @@ button {
   flex: 1;
   padding-top: 55px;
 }
+
 .contact-copy {
   max-width: 900px;
 }
+
 .contact-title {
   margin: 0;
   color: #fff;
@@ -1677,17 +1692,20 @@ button {
   letter-spacing: -3.5px;
   font-weight: 600;
 }
+
 .contact-title em {
   color: #ff5f00;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
 }
+
 .contact-actions {
   display: flex;
   align-items: center;
   gap: 28px;
   margin-top: 42px;
 }
+
 .contact-button {
   min-width: 175px;
   height: 52px;
@@ -1706,10 +1724,12 @@ button {
   letter-spacing: 0.5px;
   transition: transform 0.35s ease, background 0.35s ease;
 }
+
 .contact-button:hover {
   transform: translateY(-4px);
   background: #ff6d19;
 }
+
 .contact-button-arrow {
   width: 36px;
   height: 36px;
@@ -1721,6 +1741,7 @@ button {
   background: #fff;
   font-size: 17px;
 }
+
 .contact-resume {
   display: inline-flex;
   align-items: center;
@@ -1732,13 +1753,16 @@ button {
   padding-bottom: 5px;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
+
 .contact-resume:hover {
   color: #ff5f00;
   border-color: #ff5f00;
 }
+
 .contact-download-icon {
   font-size: 15px;
 }
+
 .contact-visual {
   position: relative;
   width: min(500px, 36%);
@@ -1749,6 +1773,7 @@ button {
   justify-content: flex-end;
   margin-bottom: 10px;
 }
+
 .contact-visual-glow {
   position: absolute;
   width: 420px;
@@ -1759,6 +1784,7 @@ button {
   background: rgba(255,95,0,0.12);
   filter: blur(70px);
 }
+
 .contact-quote {
   position: relative;
   z-index: 2;
@@ -1771,6 +1797,7 @@ button {
   line-height: 1.6;
   text-align: right;
 }
+
 .contact-signature {
   position: absolute;
   right: 0;
@@ -1780,6 +1807,7 @@ button {
   font-size: 42px;
   transform: rotate(-7deg);
 }
+
 .site-footer {
   position: relative;
   z-index: 5;
@@ -1788,6 +1816,7 @@ button {
   border-top: 1px solid rgba(255,255,255,0.08);
   background: #08090a;
 }
+
 .footer-inner {
   width: min(1500px, 92%);
   height: 70px;
@@ -1799,14 +1828,17 @@ button {
   color: rgba(255,255,255,0.35);
   font-size: 10px;
 }
+
 .footer-inner strong {
   color: #ff3b30;
 }
+
 .footer-inner a {
   color: rgba(255,255,255,0.45);
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .footer-inner a:hover {
   color: #ff5f00;
 }
