@@ -63,10 +63,6 @@ Different easing functions are used to make animations feel more natural and pol
 
 Multiple elements are revealed progressively instead of appearing at the same time.
 
-### 📱 Responsive Design
-
-The portfolio is designed to work across desktop, tablet, and mobile screen sizes.
-
 ### 🧭 Interactive Navigation
 
 Simple navigation allows users to move between the major sections of the portfolio.
@@ -360,6 +356,7 @@ This project represents my learning, experimentation, and implementation of thos
 ## 🔮 Future Improvements
 
 * Further animation optimization
+* Responsive Design
 * Improved mobile-specific interactions
 * Additional micro-interactions
 * Performance refinements
